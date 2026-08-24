@@ -3,41 +3,284 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Anomaly Detection in Industrial Process Data · [PLACEHOLDER: NAME]</title>
+    <title>
+      Anomaly Detection in Industrial Process Data · Hubert Essletzbichler
+    </title>
+    <meta
+      name="description"
+      content="Research project: systematic comparison of unsupervised machine-learning methods for anomaly detection in unlabeled walking-beam-furnace process data."
+    />
+    <link
+      rel="canonical"
+      href="https://hubert1900.github.io/essletzbichler-hubert-portfolio/projects/anomaly-detection.html"
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:title"
+      content="Anomaly Detection in Industrial Process Data · Hubert Essletzbichler"
+    />
+    <meta
+      property="og:description"
+      content="Systematic evaluation of machine-learning methods for anomaly detection in unlabeled industrial process data of a walking beam furnace."
+    />
+    <meta
+      property="og:url"
+      content="https://hubert1900.github.io/essletzbichler-hubert-portfolio/projects/anomaly-detection.html"
+    />
+    <meta
+      property="og:image"
+      content="https://hubert1900.github.io/essletzbichler-hubert-portfolio/assets/images/profile.jpg"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#f4f1ea" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../styles.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="site-header">
-      <a class="logo" href="../index.html">[PLACEHOLDER: NAME]</a>
-      <nav class="site-nav" aria-label="Primary">
-        <ul>
-          <li><a href="../index.html#home">Home</a></li>
-          <li><a href="../index.html#about">About</a></li>
-          <li><a href="../index.html#interests">Interests</a></li>
-          <li><a href="../index.html#education">Education</a></li>
-          <li><a href="../index.html#projects">Projects</a></li>
-          <li><a href="../index.html#contact">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="shell header-bar">
+        <a class="logo" href="../index.html">Hubert Essletzbichler</a>
+        <button
+          type="button"
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+          aria-label="Open menu"
+        >
+          <span class="menu-toggle-bars" aria-hidden="true"></span>
+          <span class="menu-toggle-text">Menu</span>
+        </button>
+        <nav id="primary-nav" class="site-nav" aria-label="Primary">
+          <ul>
+            <li><a href="../index.html#home">Home</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#interests">Interests</a></li>
+            <li><a href="../index.html#education">Education</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <main class="page-project">
+    <main id="main-content" class="shell page-project" tabindex="-1">
+      <article>
       <a class="back-link" href="../index.html#projects">← Back to projects</a>
       <p class="section-label">Research · Industry 4.0 · Machine Learning</p>
       <h1>Anomaly Detection in Industrial Process Data</h1>
-      <p>
+      <p class="project-lead">
         Systematic evaluation of machine-learning methods for anomaly detection
-        in unlabeled industrial process data of a walking beam furnace.
+        in unlabeled industrial process data of a walking beam furnace
+        (Stoßofen).
       </p>
-      <p>
-        [PLACEHOLDER: Full project sections — overview, problem, methods and
-        results — will be added in a later phase. Nothing beyond the agreed
-        project title and description is stated here yet.]
-      </p>
+
+      <section class="project-block" aria-labelledby="overview-heading">
+        <h2 id="overview-heading">Project Overview</h2>
+        <p>
+          This research project compares several unsupervised machine-learning
+          methods for detecting anomalies in industrial process data from a
+          walking beam furnace. The work focuses on a systematic evaluation
+          rather than on promoting a single algorithm.
+        </p>
+      </section>
+
+      <section class="project-block" aria-labelledby="problem-heading">
+        <h2 id="problem-heading">Problem Statement</h2>
+        <p>
+          Walking beam furnaces are continuous industrial heating processes.
+          Process variables are recorded over time, but labelled examples of
+          faults or unusual operating states are typically scarce. Without
+          reliable labels, conventional supervised classification is of limited
+          use. The industrial task is therefore to identify unusual patterns in
+          multivariate process data under realistic, largely unlabeled
+          conditions.
+        </p>
+      </section>
+
+      <section class="project-block" aria-labelledby="objective-heading">
+        <h2 id="objective-heading">Objective</h2>
+        <p>
+          The objective is to evaluate which machine-learning approaches are
+          suitable as a starting point for practical anomaly detection on this
+          furnace process. Suitability is assessed not only by detection
+          behaviour, but also by robustness, interpretability, handling of
+          unlabeled data, and effort required for parameterization.
+        </p>
+      </section>
+
+      <section class="project-block" aria-labelledby="data-heading">
+        <h2 id="data-heading">Data</h2>
+        <p>
+          The study uses industrial process time series from the walking beam
+          furnace. The recorded quantities include:
+        </p>
+        <ul class="plain-list">
+          <li>temperature-related process data</li>
+          <li>gas-related process data</li>
+          <li>air-related process data</li>
+        </ul>
+        <p>
+          The data are multivariate time series and are predominantly unlabeled.
+          No assumed dataset size, sampling rate, or plant identifier is stated
+          here.
+        </p>
+        <p class="placeholder-note">
+          [PLACEHOLDER: DATA DETAILS — recording period, number of variables,
+          sampling interval, preprocessing steps, or a figure of selected
+          signals, if they should be published.]
+        </p>
+      </section>
+
+      <section class="project-block" aria-labelledby="methodology-heading">
+        <h2 id="methodology-heading">Methodology</h2>
+        <p>
+          The same industrial process data are used to compare several
+          unsupervised methods under a common evaluation framing. The comparison
+          is systematic: each method is considered with regard to how it treats
+          unlabeled data, unknown anomaly types, multivariate relationships, and
+          practical constraints of industrial use. The aim is not to declare a
+          universally best algorithm, but to identify which approaches are
+          defensible for this process and this use case.
+        </p>
+        <p class="placeholder-note">
+          [PLACEHOLDER: METHOD DETAILS — preprocessing, train/test split if
+          any, and how scores or alarms were compared, if these should be
+          published.]
+        </p>
+      </section>
+
+      <section class="project-block" aria-labelledby="models-heading">
+        <h2 id="models-heading">Models</h2>
+        <ol class="model-list">
+          <li>
+            <h3>Moving Average</h3>
+            <p>
+              A simple statistical baseline that highlights deviations from a
+              smoothed local level in the time series.
+            </p>
+          </li>
+          <li>
+            <h3>PCA</h3>
+            <p>
+              Principal Component Analysis used to represent multivariate
+              variation and to flag observations that are poorly explained by
+              the dominant components.
+            </p>
+          </li>
+          <li>
+            <h3>One-Class SVM</h3>
+            <p>
+              A boundary-based one-class method that models a region of normal
+              operation in feature space.
+            </p>
+          </li>
+          <li>
+            <h3>Isolation Forest</h3>
+            <p>
+              An ensemble method that isolates unusual observations through
+              random partitions, without requiring labeled anomalies.
+            </p>
+          </li>
+          <li>
+            <h3>Local Outlier Factor</h3>
+            <p>
+              A density-based method that compares the local neighbourhood of
+              an observation with that of its neighbours.
+            </p>
+          </li>
+          <li>
+            <h3>Autoencoder</h3>
+            <p>
+              A neural reconstruction model intended for more complex, possibly
+              nonlinear relationships in the process data.
+            </p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="project-block" aria-labelledby="criteria-heading">
+        <h2 id="criteria-heading">Evaluation Criteria</h2>
+        <p>The methods were considered with respect to, among other aspects:</p>
+        <ul class="plain-list">
+          <li>handling of unlabeled data</li>
+          <li>handling of unknown anomaly types</li>
+          <li>robustness</li>
+          <li>interpretability</li>
+          <li>multivariate processing</li>
+          <li>parameterization effort</li>
+          <li>extensibility</li>
+        </ul>
+      </section>
+
+      <section class="project-block" aria-labelledby="results-heading">
+        <h2 id="results-heading">Results</h2>
+        <p>
+          There is no universally best method. Suitability depends on the
+          process, the available data, and the intended industrial use.
+        </p>
+        <div class="result-grid">
+          <article>
+            <p class="result-kicker">Practical starting point</p>
+            <h3>Isolation Forest</h3>
+            <p>
+              For the walking beam furnace process under study, Isolation Forest
+              was prioritized as a suitable starting point for practical
+              implementation.
+            </p>
+          </article>
+          <article>
+            <p class="result-kicker">Comparison model</p>
+            <h3>One-Class SVM</h3>
+            <p>
+              The One-Class SVM is kept as a complementary comparison model
+              alongside Isolation Forest.
+            </p>
+          </article>
+          <article>
+            <p class="result-kicker">Further approach</p>
+            <h3>Autoencoder</h3>
+            <p>
+              The Autoencoder was assessed as a further approach for more
+              complex and nonlinear relationships in the process data.
+            </p>
+          </article>
+        </div>
+        <p class="placeholder-note">
+          [PLACEHOLDER: RESULTS DETAIL — plots, qualitative examples, or
+          quantitative scores, only if they exist and may be published.]
+        </p>
+      </section>
+
+      <section class="project-block" aria-labelledby="conclusion-heading">
+        <h2 id="conclusion-heading">Conclusion</h2>
+        <p>
+          The results show that the most complex machine-learning model is not
+          automatically the most suitable one for industrial use. Fitness
+          depends in particular on:
+        </p>
+        <ul class="plain-list">
+          <li>the available process data</li>
+          <li>the requirements of the use case</li>
+          <li>the planned area of application</li>
+          <li>interpretability</li>
+          <li>robustness</li>
+          <li>parameterization effort</li>
+        </ul>
+      </section>
+      </article>
     </main>
 
     <footer class="site-footer">
-      <p>© [PLACEHOLDER: YEAR] [PLACEHOLDER: NAME]</p>
+      <div class="shell footer-bar">
+        <p>© 2026 Hubert Essletzbichler</p>
+        <p>Machine Learning · Industrial Automation</p>
+      </div>
     </footer>
 
     <script src="../script.js"></script>
