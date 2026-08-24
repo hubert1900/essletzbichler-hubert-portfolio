@@ -75,32 +75,47 @@
       <p class="section-label">Research · Industry 4.0 · Machine Learning</p>
       <h1>Anomaly Detection in Industrial Process Data</h1>
       <p class="project-lead">
-        Systematic evaluation of machine-learning methods for anomaly detection
-        in unlabeled industrial process data of a walking beam furnace
-        (Stoßofen).
+        Analysis and evaluation of machine-learning models for anomaly
+        detection in industrial time-series data, using walking beam furnaces
+        (Stoßöfen) as an example.
       </p>
+      <dl class="meta-row">
+        <div>
+          <dt>Course</dt>
+          <dd>Vertiefung Berufsfeld – Tun/Forschen/Gründen</dd>
+        </div>
+        <div>
+          <dt>Date</dt>
+          <dd>16 August 2026</dd>
+        </div>
+        <div>
+          <dt>Team</dt>
+          <dd>Laila Gruber · Hubert Essletzbichler</dd>
+        </div>
+      </dl>
 
       <section class="project-block" aria-labelledby="overview-heading">
         <h2 id="overview-heading">Project Overview</h2>
         <p>
-          This research project compares several unsupervised machine-learning
-          methods for detecting anomalies in industrial process data from a
-          walking beam furnace. The work focuses on a systematic evaluation
-          rather than on promoting a single algorithm.
+          The aim is to identify suitable machine-learning methods for anomaly
+          detection in real, multivariate and predominantly unlabeled process
+          data. The work is a criteria-based comparison rather than the
+          promotion of a single algorithm.
         </p>
       </section>
 
       <section class="project-block" aria-labelledby="problem-heading">
         <h2 id="problem-heading">Problem Statement</h2>
         <p>
-          Walking beam furnaces are continuous industrial heating processes.
-          Process variables are recorded over time, but labelled examples of
-          faults or unusual operating states are typically scarce. Without
-          reliable labels, conventional supervised classification is of limited
-          use. The industrial task is therefore to identify unusual patterns in
-          multivariate process data under realistic, largely unlabeled
-          conditions.
+          The industrial challenge is anomaly detection in a walking beam
+          furnace process with:
         </p>
+        <ul class="plain-list">
+          <li>more than 100 relevant process signals</li>
+          <li>several process phases: heating, holding and cooling</li>
+          <li>rare and predominantly unlabeled anomalies</li>
+          <li>high requirements for robustness and traceability</li>
+        </ul>
       </section>
 
       <section class="project-block" aria-labelledby="objective-heading">
@@ -117,41 +132,27 @@
       <section class="project-block" aria-labelledby="data-heading">
         <h2 id="data-heading">Data</h2>
         <p>
-          The study uses industrial process time series from the walking beam
-          furnace. The recorded quantities include:
+          The study uses industrial process time series from walking beam
+          furnaces. According to the project presentation, more than 100
+          relevant process signals are involved, covering heating, holding and
+          cooling phases. Anomalies are rare and predominantly unlabeled.
         </p>
-        <ul class="plain-list">
-          <li>temperature-related process data</li>
-          <li>gas-related process data</li>
-          <li>air-related process data</li>
-        </ul>
         <p>
-          The data are multivariate time series and are predominantly unlabeled.
-          No assumed dataset size, sampling rate, or plant identifier is stated
-          here.
-        </p>
-        <p class="placeholder-note">
-          [PLACEHOLDER: DATA DETAILS — recording period, number of variables,
-          sampling interval, preprocessing steps, or a figure of selected
-          signals, if they should be published.]
+          Temperature-, gas- and air-related process quantities form the
+          multivariate time-series context of the use case.
         </p>
       </section>
 
       <section class="project-block" aria-labelledby="methodology-heading">
         <h2 id="methodology-heading">Methodology</h2>
         <p>
-          The same industrial process data are used to compare several
-          unsupervised methods under a common evaluation framing. The comparison
-          is systematic: each method is considered with regard to how it treats
-          unlabeled data, unknown anomaly types, multivariate relationships, and
-          practical constraints of industrial use. The aim is not to declare a
-          universally best algorithm, but to identify which approaches are
-          defensible for this process and this use case.
+          The approach moves from process data to a criteria-based evaluation.
+          What mattered was not only the model itself, but also data
+          preparation, the anomaly score and the threshold.
         </p>
-        <p class="placeholder-note">
-          [PLACEHOLDER: METHOD DETAILS — preprocessing, train/test split if
-          any, and how scores or alarms were compared, if these should be
-          published.]
+        <p>
+          The examined methods are Moving Average, PCA, One-Class SVM,
+          Isolation Forest, Local Outlier Factor and Autoencoder.
         </p>
       </section>
 
@@ -221,57 +222,85 @@
       <section class="project-block" aria-labelledby="results-heading">
         <h2 id="results-heading">Results</h2>
         <p>
-          There is no universally best method. Suitability depends on the
-          process, the available data, and the intended industrial use.
+          For the walking beam furnace process under study, Isolation Forest is
+          the most suitable first model for practical use. One-Class SVM serves
+          as a complementary comparison model. The Autoencoder is a capable but
+          more demanding expansion path.
         </p>
         <div class="result-grid">
           <article>
-            <p class="result-kicker">Practical starting point</p>
+            <p class="result-kicker">Preferred model</p>
             <h3>Isolation Forest</h3>
             <p>
-              For the walking beam furnace process under study, Isolation Forest
-              was prioritized as a suitable starting point for practical
-              implementation.
+              Suitable for unlabeled data, efficient and robust, with a good
+              balance of effort and benefit. Prioritized as the first
+              practically deployable model.
             </p>
           </article>
           <article>
-            <p class="result-kicker">Comparison model</p>
+            <p class="result-kicker">Complementary model</p>
             <h3>One-Class SVM</h3>
             <p>
-              The One-Class SVM is kept as a complementary comparison model
-              alongside Isolation Forest.
+              Learns the normal operating region and can detect unknown
+              deviations. Requires higher parameterization effort.
             </p>
           </article>
           <article>
             <p class="result-kicker">Further approach</p>
             <h3>Autoencoder</h3>
             <p>
-              The Autoencoder was assessed as a further approach for more
-              complex and nonlinear relationships in the process data.
+              Suitable for complex patterns and nonlinear relationships, with
+              higher training and interpretation effort.
             </p>
           </article>
         </div>
-        <p class="placeholder-note">
-          [PLACEHOLDER: RESULTS DETAIL — plots, qualitative examples, or
-          quantitative scores, only if they exist and may be published.]
+      </section>
+
+      <section class="project-block" aria-labelledby="contribution-heading">
+        <h2 id="contribution-heading">Team contribution</h2>
+        <ul class="plain-list">
+          <li>literature and model research</li>
+          <li>deriving requirements from the use case</li>
+          <li>development of a qualitative evaluation methodology</li>
+          <li>comparison and prioritization of the most suitable approaches</li>
+        </ul>
+      </section>
+
+      <section class="project-block" aria-labelledby="learnings-heading">
+        <h2 id="learnings-heading">Learnings</h2>
+        <ul class="plain-list">
+          <li>
+            Anomaly detection depends strongly on data quality, features and
+            thresholds.
+          </li>
+          <li>
+            Interpretable models can be especially valuable at the start.
+          </li>
+          <li>
+            Model choice must always fit the concrete industrial use case.
+          </li>
+        </ul>
+      </section>
+
+      <section class="project-block" aria-labelledby="outlook-heading">
+        <h2 id="outlook-heading">Next step</h2>
+        <p>
+          Prototypical implementation of Isolation Forest, One-Class SVM and
+          Autoencoder with a unified data basis, comparable preprocessing and a
+          shared evaluation logic.
         </p>
       </section>
 
       <section class="project-block" aria-labelledby="conclusion-heading">
         <h2 id="conclusion-heading">Conclusion</h2>
         <p>
-          The results show that the most complex machine-learning model is not
-          automatically the most suitable one for industrial use. Fitness
-          depends in particular on:
+          The project shows how a real industrial problem can be turned into a
+          traceable, criteria-based machine-learning approach. The most complex
+          model is not automatically the most suitable one for industrial use.
+          Fitness depends in particular on the available process data, the
+          requirements of the use case, the planned area of application,
+          interpretability, robustness and parameterization effort.
         </p>
-        <ul class="plain-list">
-          <li>the available process data</li>
-          <li>the requirements of the use case</li>
-          <li>the planned area of application</li>
-          <li>interpretability</li>
-          <li>robustness</li>
-          <li>parameterization effort</li>
-        </ul>
       </section>
       </article>
     </main>
