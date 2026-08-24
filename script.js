@@ -160,7 +160,7 @@
 
   if (!prefersReducedMotion) {
       var revealTargets = document.querySelectorAll(
-        "main > section:not(#home), .page-project .project-block"
+        "main > section:not(#home), .page-project .project-block, .page-project .case-section"
       );
 
     if ("IntersectionObserver" in window) {
@@ -173,7 +173,7 @@
             }
           });
         },
-        { threshold: 0.08, rootMargin: "0px 0px -6% 0px" }
+        { threshold: 0.01, rootMargin: "0px 0px -40px 0px" }
       );
 
       revealTargets.forEach(function (el) {

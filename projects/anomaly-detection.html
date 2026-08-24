@@ -29,7 +29,7 @@
     />
     <meta
       property="og:image"
-      content="https://hubert1900.github.io/essletzbichler-hubert-portfolio/assets/images/profile.jpg"
+      content="https://hubert1900.github.io/essletzbichler-hubert-portfolio/assets/images/projects/walking-beam-furnace.png"
     />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="theme-color" content="#f4f1ea" />
@@ -41,7 +41,7 @@
     />
     <link rel="stylesheet" href="../styles.css" />
   </head>
-  <body>
+  <body class="case-study">
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="site-header">
       <div class="shell header-bar">
@@ -70,237 +70,526 @@
     </header>
 
     <main id="main-content" class="shell page-project" tabindex="-1">
-      <article>
+      <article aria-labelledby="project-title">
       <a class="back-link" href="../index.html#projects">← Back to projects</a>
-      <p class="section-label">Research · Industry 4.0 · Machine Learning</p>
-      <h1>Anomaly Detection in Industrial Process Data</h1>
-      <p class="project-lead">
-        Analysis and evaluation of machine-learning models for anomaly
-        detection in industrial time-series data, using walking beam furnaces
-        (Stoßöfen) as an example.
-      </p>
-      <dl class="meta-row">
-        <div>
-          <dt>Course</dt>
-          <dd>Vertiefung Berufsfeld – Tun/Forschen/Gründen</dd>
-        </div>
-        <div>
-          <dt>Date</dt>
-          <dd>16 August 2026</dd>
-        </div>
-        <div>
-          <dt>Team</dt>
-          <dd>Laila Gruber · Hubert Essletzbichler</dd>
-        </div>
-      </dl>
 
-      <section class="project-block" aria-labelledby="overview-heading">
+      <header class="case-hero">
+        <p class="case-kicker">Research · Industry 4.0 · Machine Learning</p>
+        <div class="case-hero-layout">
+          <h1 id="project-title">
+            <span>Anomaly Detection</span>
+            <span>in Industrial</span>
+            <span>Process Data</span>
+          </h1>
+          <div class="case-hero-aside">
+            <p class="case-hero-lede">
+              Industrial time-series data.
+              A case study of walking beam furnaces (Stoßöfen).
+            </p>
+            <dl class="case-meta">
+              <div>
+                <dt>Course</dt>
+                <dd>Vertiefung Berufsfeld – Tun/Forschen/Gründen</dd>
+              </div>
+              <div>
+                <dt>Date</dt>
+                <dd>2026</dd>
+              </div>
+              <div>
+                <dt>Status</dt>
+                <dd>Completed</dd>
+              </div>
+              <div>
+                <dt>Team</dt>
+                <dd>Laila Gruber · Hubert Essletzbichler</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </header>
+
+      <figure class="case-hero-visual">
+        <img
+          src="../assets/images/projects/walking-beam-furnace.png"
+          width="1311"
+          height="701"
+          decoding="async"
+          fetchpriority="high"
+          alt="Diagram of a walking beam furnace process: aluminium blocks move through separately controlled heating zones across heating, holding and cooling phases, with many process signals per zone."
+        />
+        <figcaption>
+          Walking beam furnace process used as the industrial example
+          (heating, holding, cooling).
+        </figcaption>
+      </figure>
+
+      <section class="case-section" aria-labelledby="overview-heading">
         <h2 id="overview-heading">Project Overview</h2>
-        <p>
-          The aim is to identify suitable machine-learning methods for anomaly
-          detection in real, multivariate and predominantly unlabeled process
-          data. The work is a criteria-based comparison rather than the
-          promotion of a single algorithm.
-        </p>
+        <div class="case-overview">
+          <p>
+            The aim is to identify suitable machine-learning methods for anomaly
+            detection in real, multivariate and predominantly unlabeled process
+            data. The work is a criteria-based comparison of approaches, not a
+            search for one universally best algorithm.
+          </p>
+          <blockquote class="case-statement">
+            There is no universally best anomaly detection method.
+          </blockquote>
+        </div>
       </section>
 
-      <section class="project-block" aria-labelledby="problem-heading">
-        <h2 id="problem-heading">Problem Statement</h2>
-        <p>
-          The industrial challenge is anomaly detection in a walking beam
-          furnace process with:
+      <section class="case-section" aria-labelledby="challenge-heading">
+        <h2 id="challenge-heading">The Challenge</h2>
+        <p class="case-intro">
+          Anomaly detection in a walking beam furnace process has to deal with
+          industrial conditions that make a purely model-centric view
+          insufficient.
         </p>
-        <ul class="plain-list">
-          <li>more than 100 relevant process signals</li>
-          <li>several process phases: heating, holding and cooling</li>
-          <li>rare and predominantly unlabeled anomalies</li>
-          <li>high requirements for robustness and traceability</li>
+        <ul class="case-challenge-grid">
+          <li>
+            <span class="case-index">01</span>
+            <p>More than 100 relevant process signals</p>
+          </li>
+          <li>
+            <span class="case-index">02</span>
+            <p>
+              Multiple process phases
+              <span class="case-sub">Heating · Holding · Cooling</span>
+            </p>
+          </li>
+          <li>
+            <span class="case-index">03</span>
+            <p>Rare and predominantly unlabeled anomalies</p>
+          </li>
+          <li>
+            <span class="case-index">04</span>
+            <p>High requirements for robustness and traceability</p>
+          </li>
         </ul>
       </section>
 
-      <section class="project-block" aria-labelledby="objective-heading">
+      <section class="case-section" aria-labelledby="objective-heading">
         <h2 id="objective-heading">Objective</h2>
-        <p>
+        <p class="case-intro">
           The objective is to evaluate which machine-learning approaches are
-          suitable as a starting point for practical anomaly detection on this
-          furnace process. Suitability is assessed not only by detection
-          behaviour, but also by robustness, interpretability, handling of
-          unlabeled data, and effort required for parameterization.
+          suitable as a starting point for practical anomaly detection on the
+          furnace process. The assessment considers industrial constraints
+          rather than a single theoretical performance measure.
         </p>
+        <ul class="case-objective-grid">
+          <li>Robustness</li>
+          <li>Interpretability</li>
+          <li>Handling of unlabeled data</li>
+          <li>Parameterization effort</li>
+          <li>Multivariate processing</li>
+          <li>Unknown anomaly types</li>
+        </ul>
       </section>
 
-      <section class="project-block" aria-labelledby="data-heading">
-        <h2 id="data-heading">Data</h2>
-        <p>
-          The study uses industrial process time series from walking beam
-          furnaces. According to the project presentation, more than 100
-          relevant process signals are involved, covering heating, holding and
-          cooling phases. Anomalies are rare and predominantly unlabeled.
+      <section class="case-section" aria-labelledby="data-heading">
+        <h2 id="data-heading">Industrial Process Data</h2>
+        <p class="case-intro">
+          The use case is industrial process time series from walking beam
+          furnaces. The figures below follow the project presentation and are
+          not a measured sensor inventory.
         </p>
-        <p>
-          Temperature-, gas- and air-related process quantities form the
-          multivariate time-series context of the use case.
-        </p>
+        <div class="case-data-grid">
+          <article>
+            <p class="case-data-value">100+</p>
+            <p>relevant process signals</p>
+          </article>
+          <article>
+            <p class="case-data-value case-data-stack">
+              Heating
+              <span>Holding</span>
+              <span>Cooling</span>
+            </p>
+            <p>process phases</p>
+          </article>
+          <article>
+            <p class="case-data-value case-data-stack">
+              Temperature
+              <span>Gas</span>
+              <span>Air</span>
+            </p>
+            <p>process quantities</p>
+          </article>
+          <article>
+            <p class="case-data-value">Rare</p>
+            <p>predominantly unlabeled anomalies</p>
+          </article>
+        </div>
       </section>
 
-      <section class="project-block" aria-labelledby="methodology-heading">
-        <h2 id="methodology-heading">Methodology</h2>
-        <p>
-          The approach moves from process data to a criteria-based evaluation.
-          What mattered was not only the model itself, but also data
-          preparation, the anomaly score and the threshold.
+      <section class="case-section" aria-labelledby="insight-heading">
+        <h2 id="insight-heading" class="visually-hidden">
+          What shaped the comparison
+        </h2>
+        <blockquote class="case-statement case-statement-wide">
+          The model itself was not the only decisive factor.
+        </blockquote>
+        <p class="case-intro">
+          The comparison therefore treats detection as a chain of choices, not
+          as the selection of an algorithm in isolation. This is a conceptual
+          relationship used for evaluation, not a claim that a specific
+          pipeline was implemented.
         </p>
-        <p>
-          The examined methods are Moving Average, PCA, One-Class SVM,
-          Isolation Forest, Local Outlier Factor and Autoencoder.
-        </p>
+        <ol class="case-chain">
+          <li>Data preparation</li>
+          <li>Anomaly score</li>
+          <li>Threshold</li>
+          <li>Model</li>
+        </ol>
       </section>
 
-      <section class="project-block" aria-labelledby="models-heading">
-        <h2 id="models-heading">Models</h2>
-        <ol class="model-list">
+      <section class="case-section" aria-labelledby="methodology-heading">
+        <h2 id="methodology-heading">
+          From Process Data to Criteria-Based Evaluation
+        </h2>
+        <p class="case-intro">
+          The project moved from the industrial use case to a qualitative
+          comparison of six machine-learning approaches, then to a practical
+          starting point.
+        </p>
+        <ol class="case-flow">
+          <li>Industrial Process Data</li>
+          <li>Use Case Requirements</li>
+          <li>Literature &amp; Model Research</li>
+          <li>Six ML Approaches</li>
+          <li>Criteria-Based Evaluation</li>
+          <li>Prioritization</li>
+          <li>Practical Starting Point</li>
+        </ol>
+        <figure class="case-figure">
+          <div class="case-principle">
+            <p class="case-principle-kicker">
+              Basic principle of model comparison
+            </p>
+            <p class="case-principle-lead">
+              From process data to criteria-based evaluation
+            </p>
+            <ol class="case-principle-steps">
+              <li>
+                <h3>Process data</h3>
+                <p>Temperature, gas, air, control variables</p>
+              </li>
+              <li>
+                <h3>Preprocessing / feature engineering</h3>
+                <p>Cleaning, segmentation, features</p>
+              </li>
+              <li>
+                <h3>Model</h3>
+                <p>
+                  e.g. PCA, One-Class SVM, Isolation Forest, Autoencoder
+                </p>
+              </li>
+              <li>
+                <h3>Anomaly score</h3>
+                <p>e.g. reconstruction error, distance, decision value</p>
+              </li>
+              <li>
+                <h3>Threshold / decision</h3>
+                <p>normal or anomalous</p>
+              </li>
+              <li>
+                <h3>Evaluation by defined criteria</h3>
+                <p>
+                  e.g. robustness, interpretability, parameterization effort
+                </p>
+              </li>
+            </ol>
+            <p class="case-principle-note">
+              Not only the model itself, but also score formation and the
+              threshold influence the result.
+            </p>
+          </div>
+          <figcaption>
+            English version of the comparison principle from the project
+            presentation. Conceptual evaluation logic, not a completed
+            implementation.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="case-section" aria-labelledby="models-heading">
+        <h2 id="models-heading">Investigated Models</h2>
+        <p class="case-intro">
+          Six approaches were investigated as candidates. Investigation here
+          means literature- and criteria-based comparison, not a completed
+          industrial deployment of each model.
+        </p>
+        <ol class="case-model-grid">
           <li>
+            <span class="case-index">01</span>
             <h3>Moving Average</h3>
             <p>
-              A simple statistical baseline that highlights deviations from a
-              smoothed local level in the time series.
+              Simple statistical baseline for identifying deviations from a
+              smoothed local level.
             </p>
           </li>
           <li>
+            <span class="case-index">02</span>
             <h3>PCA</h3>
             <p>
-              Principal Component Analysis used to represent multivariate
-              variation and to flag observations that are poorly explained by
-              the dominant components.
+              Multivariate method for representing dominant variation and
+              identifying observations poorly explained by the main components.
             </p>
           </li>
           <li>
+            <span class="case-index">03</span>
             <h3>One-Class SVM</h3>
             <p>
-              A boundary-based one-class method that models a region of normal
-              operation in feature space.
+              Boundary-based method for modelling a region of normal operation.
             </p>
           </li>
           <li>
+            <span class="case-index">04</span>
             <h3>Isolation Forest</h3>
             <p>
-              An ensemble method that isolates unusual observations through
-              random partitions, without requiring labeled anomalies.
+              Ensemble method that isolates unusual observations through random
+              partitions without requiring labeled anomalies.
             </p>
           </li>
           <li>
+            <span class="case-index">05</span>
             <h3>Local Outlier Factor</h3>
             <p>
-              A density-based method that compares the local neighbourhood of
-              an observation with that of its neighbours.
+              Density-based approach comparing the local neighbourhood of an
+              observation with neighbouring observations.
             </p>
           </li>
           <li>
+            <span class="case-index">06</span>
             <h3>Autoencoder</h3>
             <p>
-              A neural reconstruction model intended for more complex, possibly
-              nonlinear relationships in the process data.
+              Neural reconstruction model suited to more complex and
+              potentially nonlinear relationships.
             </p>
           </li>
         </ol>
       </section>
 
-      <section class="project-block" aria-labelledby="criteria-heading">
+      <section class="case-section" aria-labelledby="criteria-heading">
         <h2 id="criteria-heading">Evaluation Criteria</h2>
-        <p>The methods were considered with respect to, among other aspects:</p>
-        <ul class="plain-list">
-          <li>handling of unlabeled data</li>
-          <li>handling of unknown anomaly types</li>
-          <li>robustness</li>
-          <li>interpretability</li>
-          <li>multivariate processing</li>
-          <li>parameterization effort</li>
-          <li>extensibility</li>
-        </ul>
+        <p class="case-intro">
+          The models were not judged solely by theoretical detection
+          performance. Suitability for the furnace process was assessed against
+          these industrial criteria.
+        </p>
+        <ol class="case-eval-list">
+          <li>Unlabeled data</li>
+          <li>Unknown anomaly types</li>
+          <li>Robustness</li>
+          <li>Interpretability</li>
+          <li>Multivariate processing</li>
+          <li>Parameterization effort</li>
+          <li>Extensibility</li>
+        </ol>
       </section>
 
-      <section class="project-block" aria-labelledby="results-heading">
-        <h2 id="results-heading">Results</h2>
-        <p>
-          For the walking beam furnace process under study, Isolation Forest is
-          the most suitable first model for practical use. One-Class SVM serves
-          as a complementary comparison model. The Autoencoder is a capable but
-          more demanding expansion path.
+      <section class="case-section case-results-section" aria-labelledby="results-heading">
+        <h2 id="results-heading">Prioritized Models</h2>
+        <blockquote class="case-statement case-statement-wide">
+          The comparison showed that the most complex model is not
+          automatically the most suitable model for industrial use.
+        </blockquote>
+        <p class="case-intro">
+          Of the six investigated approaches, three were prioritized for the
+          walking beam furnace process. Isolation Forest is the preferred
+          starting point. One-Class SVM is a complementary option. The
+          Autoencoder is a further development path, not the first model to
+          deploy.
         </p>
-        <div class="result-grid">
-          <article>
-            <p class="result-kicker">Preferred model</p>
+
+        <div class="case-results">
+          <article class="case-result case-result-primary">
+            <p class="case-index">01</p>
+            <p class="case-result-label">Preferred Model</p>
             <h3>Isolation Forest</h3>
-            <p>
-              Suitable for unlabeled data, efficient and robust, with a good
-              balance of effort and benefit. Prioritized as the first
-              practically deployable model.
-            </p>
+            <ul>
+              <li>Suitable for unlabeled data</li>
+              <li>Efficient and robust</li>
+              <li>Good balance between effort and benefit</li>
+            </ul>
+            <blockquote>
+              Prioritized as the first practically deployable model for the
+              considered walking beam furnace process.
+            </blockquote>
           </article>
-          <article>
-            <p class="result-kicker">Complementary model</p>
+
+          <article class="case-result">
+            <p class="case-index">02</p>
+            <p class="case-result-label">Complementary Model</p>
             <h3>One-Class SVM</h3>
-            <p>
-              Learns the normal operating region and can detect unknown
-              deviations. Requires higher parameterization effort.
-            </p>
+            <ul>
+              <li>Learns the normal operating region</li>
+              <li>Can detect unknown deviations</li>
+              <li>Higher parameterization effort</li>
+            </ul>
           </article>
-          <article>
-            <p class="result-kicker">Further approach</p>
+
+          <article class="case-result">
+            <p class="case-index">03</p>
+            <p class="case-result-label">Further Development Path</p>
             <h3>Autoencoder</h3>
-            <p>
-              Suitable for complex patterns and nonlinear relationships, with
-              higher training and interpretation effort.
-            </p>
+            <ul>
+              <li>Suitable for complex patterns</li>
+              <li>Suitable for nonlinear relationships</li>
+              <li>Higher training and interpretation effort</li>
+            </ul>
           </article>
+        </div>
+
+        <div class="case-compare-wrap">
+          <h3 id="compare-heading">Qualitative comparison</h3>
+          <p class="case-intro">
+            The project did not assign numerical scores. The labels below
+            follow the written prioritization only; empty cells were not
+            specified in the source.
+          </p>
+          <div class="case-compare" role="table" aria-labelledby="compare-heading">
+            <div class="case-compare-row case-compare-head" role="row">
+              <span role="columnheader">Criterion</span>
+              <span role="columnheader">Isolation Forest</span>
+              <span role="columnheader">One-Class SVM</span>
+              <span role="columnheader">Autoencoder</span>
+            </div>
+            <div class="case-compare-row" role="row">
+              <span role="rowheader">Unlabeled data</span>
+              <span role="cell" data-model="Isolation Forest">Strong fit</span>
+              <span role="cell" data-model="One-Class SVM">Suitable</span>
+              <span role="cell" data-model="Autoencoder">—</span>
+            </div>
+            <div class="case-compare-row" role="row">
+              <span role="rowheader">Robustness</span>
+              <span role="cell" data-model="Isolation Forest">Strong fit</span>
+              <span role="cell" data-model="One-Class SVM">—</span>
+              <span role="cell" data-model="Autoencoder">—</span>
+            </div>
+            <div class="case-compare-row" role="row">
+              <span role="rowheader">Interpretability</span>
+              <span role="cell" data-model="Isolation Forest">—</span>
+              <span role="cell" data-model="One-Class SVM">—</span>
+              <span role="cell" data-model="Autoencoder">Higher effort</span>
+            </div>
+            <div class="case-compare-row" role="row">
+              <span role="rowheader">Parameterization effort</span>
+              <span role="cell" data-model="Isolation Forest">Suitable</span>
+              <span role="cell" data-model="One-Class SVM">Higher effort</span>
+              <span role="cell" data-model="Autoencoder">Higher effort</span>
+            </div>
+            <div class="case-compare-row" role="row">
+              <span role="rowheader">Complexity</span>
+              <span role="cell" data-model="Isolation Forest">Preferred starting point</span>
+              <span role="cell" data-model="One-Class SVM">Complementary</span>
+              <span role="cell" data-model="Autoencoder">Further development</span>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="project-block" aria-labelledby="contribution-heading">
-        <h2 id="contribution-heading">Team contribution</h2>
-        <ul class="plain-list">
-          <li>literature and model research</li>
-          <li>deriving requirements from the use case</li>
-          <li>development of a qualitative evaluation methodology</li>
-          <li>comparison and prioritization of the most suitable approaches</li>
-        </ul>
-      </section>
-
-      <section class="project-block" aria-labelledby="learnings-heading">
-        <h2 id="learnings-heading">Learnings</h2>
-        <ul class="plain-list">
-          <li>
-            Anomaly detection depends strongly on data quality, features and
-            thresholds.
-          </li>
-          <li>
-            Interpretable models can be especially valuable at the start.
-          </li>
-          <li>
-            Model choice must always fit the concrete industrial use case.
-          </li>
-        </ul>
-      </section>
-
-      <section class="project-block" aria-labelledby="outlook-heading">
-        <h2 id="outlook-heading">Next step</h2>
-        <p>
-          Prototypical implementation of Isolation Forest, One-Class SVM and
-          Autoencoder with a unified data basis, comparable preprocessing and a
-          shared evaluation logic.
+      <section class="case-section" aria-labelledby="contribution-heading">
+        <h2 id="contribution-heading">My Contribution</h2>
+        <p class="case-intro">
+          The project presentation records the following contribution for the
+          team Laila Gruber · Hubert Essletzbichler. It does not split the
+          work into individual roles.
         </p>
+        <ol class="case-timeline">
+          <li>
+            <h3>Literature and model research</h3>
+            <p>
+              Survey of machine-learning approaches for anomaly detection
+              relevant to the industrial use case.
+            </p>
+          </li>
+          <li>
+            <h3>Use-case requirements</h3>
+            <p>
+              Deriving requirements from the walking beam furnace process
+              rather than from a generic algorithm ranking.
+            </p>
+          </li>
+          <li>
+            <h3>Qualitative evaluation methodology</h3>
+            <p>
+              Development of a criteria-based comparison instead of a search
+              for one universally best model.
+            </p>
+          </li>
+          <li>
+            <h3>Comparison and prioritization</h3>
+            <p>
+              Comparison of suitable approaches and prioritization of a
+              practical starting point.
+            </p>
+          </li>
+        </ol>
       </section>
 
-      <section class="project-block" aria-labelledby="conclusion-heading">
+      <section class="case-section" aria-labelledby="learnings-heading">
+        <h2 id="learnings-heading">Key Learnings</h2>
+        <ol class="case-learnings">
+          <li>
+            <span class="case-index">01</span>
+            <p>
+              Anomaly detection depends strongly on data quality, features and
+              thresholds.
+            </p>
+          </li>
+          <li>
+            <span class="case-index">02</span>
+            <p>
+              Interpretable models can be especially valuable at the start.
+            </p>
+          </li>
+          <li>
+            <span class="case-index">03</span>
+            <p>
+              Model choice must always fit the concrete industrial use case.
+            </p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="case-section" aria-labelledby="outlook-heading">
+        <p class="case-future-label">Next step / future work</p>
+        <h2 id="outlook-heading">Next Step</h2>
+        <p class="case-intro">
+          The prototype has not been implemented yet. The planned next step is
+          a prototypical implementation of the three prioritized approaches.
+        </p>
+        <ul class="case-next-models">
+          <li>Isolation Forest</li>
+          <li>One-Class SVM</li>
+          <li>Autoencoder</li>
+        </ul>
+        <p class="case-using-label">Using</p>
+        <ul class="case-next-conditions">
+          <li>unified data basis</li>
+          <li>comparable preprocessing</li>
+          <li>shared evaluation logic</li>
+        </ul>
+      </section>
+
+      <section class="case-section case-close" aria-labelledby="conclusion-heading">
         <h2 id="conclusion-heading">Conclusion</h2>
-        <p>
+        <blockquote class="case-statement case-statement-wide">
           The project shows how a real industrial problem can be turned into a
-          traceable, criteria-based machine-learning approach. The most complex
-          model is not automatically the most suitable one for industrial use.
-          Fitness depends in particular on the available process data, the
-          requirements of the use case, the planned area of application,
-          interpretability, robustness and parameterization effort.
+          traceable, criteria-based machine-learning approach.
+        </blockquote>
+        <p class="case-intro">
+          The most complex model is not automatically the most suitable for
+          industrial use. Suitability depends on:
         </p>
+        <ul class="case-close-grid">
+          <li>available process data</li>
+          <li>requirements of the use case</li>
+          <li>planned application</li>
+          <li>interpretability</li>
+          <li>robustness</li>
+          <li>parameterization effort</li>
+        </ul>
       </section>
       </article>
     </main>
