@@ -159,9 +159,9 @@
   }
 
   if (!prefersReducedMotion) {
-    var revealTargets = document.querySelectorAll(
-      "main > section:not(#home), main.page-project"
-    );
+      var revealTargets = document.querySelectorAll(
+        "main > section:not(#home), .page-project .project-block"
+      );
 
     if ("IntersectionObserver" in window) {
       var observer = new IntersectionObserver(
@@ -173,7 +173,7 @@
             }
           });
         },
-        { threshold: 0.14, rootMargin: "0px 0px -8% 0px" }
+        { threshold: 0.08, rootMargin: "0px 0px -6% 0px" }
       );
 
       revealTargets.forEach(function (el) {
